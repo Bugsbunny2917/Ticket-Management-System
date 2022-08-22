@@ -10,6 +10,7 @@
   </head>
   <body>
   
+  
 
   <div class="content">
     
@@ -21,6 +22,7 @@
           <div class="box">
             <h3 class="heading">RAISE YOUR TICKET</h3>
             <form class="mb-5" method="post" id="contactForm" name="contactForm">
+              {% csrf_token %}
               <div class="row">
                 
                 <div class="col-md-12 form-group">
@@ -57,13 +59,5 @@
         </div>
       </div>
   </div>
-    
-    
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

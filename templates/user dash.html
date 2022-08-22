@@ -3,4 +3,28 @@
 <head>    
     <title>User Dashboard</title>
 </head>
+<body>
+    <div class="text-center p-t-115">
+        <span class="txt1">
+            Don’t have a complaint?
+        </span>
+
+        <a class="txt2" href={% url 'ticket' %}>
+        <button class="button">  Resgister complaint </button>
+        </a>
+    </div>
+    
+    <div class='container'>
+        <ul>
+        {% for ticket in ticket_data %}
+            <strong> {{ticket}} </strong>
+            <ul>
+            <li>Name: {{ ticket.name }}</li>
+            <li>Email: {{ ticket.email }}</li>
+            <li>Complaint: {{ ticket.complaint }}</li>
+            <li>Status: {{ ticket.ticket_status }}</li>
+            </ul>
+        {% endfor %}
+        </ul>
+</body>
 </html>

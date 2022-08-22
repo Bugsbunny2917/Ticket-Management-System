@@ -6,7 +6,7 @@ from complaint_system import views
 urlpatterns = [
     path("", views.login, name="login"),
     path("registration", views.registration, name="registration"),
-    path("ticket", views.ticket, name="ticket"),
+    path("ticket", views.complaint_ticket, name="ticket"),
     path("admin_page", views.admin_page, name="admin"),
     path("user_registration", views.user_registration, name="user registration"),
     path("admin_registration", views.admin_registration, name="admin registration"),

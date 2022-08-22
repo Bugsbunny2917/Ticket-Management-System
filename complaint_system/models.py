@@ -27,10 +27,11 @@ class Ticket(models.Model):
         ('c','complete'),
         ('ip','inprogress')
     ]
-    ticket_no = models.PositiveIntegerField(primary_key=True)
+    # ticket_no = models.PositiveIntegerField(primary_key=True)
     name = models.CharField(max_length=255)
-    discription = models.TextField()
+    email = models.EmailField(max_length=225)
+    complaint = models.TextField()
     ticket_status = models.CharField(max_length=20,choices=TICKET_STATUS_CHOICE, default=('p'))
 
     def __str__(self):
-        return f'{self.id}-{self.ticket_no}'
+        return f'{self.id}-{self.email}'
